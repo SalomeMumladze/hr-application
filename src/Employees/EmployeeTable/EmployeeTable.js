@@ -4,17 +4,18 @@ import { Table, TableCell, TableBody, TableContainer, TableHead, TableRow } from
 
 const useStyles = makeStyles({});
 
-const TableModule = () => {
+const EmployeeTable = () => {
   const classes = useStyles();
   return (
     <TableContainer>
-      <Table sx={{ maxWidth: 850 }} aria-label="simple table">
+      <Table aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell>Id</TableCell>
             <TableCell>Name</TableCell>
-            <TableCell>Manager Mail</TableCell>
-            <TableCell>Numbers of emploee</TableCell>
+            <TableCell>Email</TableCell>
+            <TableCell>Salary</TableCell>
+            <TableCell>Department</TableCell>
           </TableRow>
         </TableHead>
         <TableBody></TableBody>
@@ -23,4 +24,4 @@ const TableModule = () => {
   );
 };
 
-export default TableModule;
+export default EmployeeTable;

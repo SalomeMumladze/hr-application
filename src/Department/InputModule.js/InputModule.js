@@ -1,12 +1,16 @@
-import React, { useState } from "react";
-import { TextField, Button, Stack } from "@mui/material";
-import HeaderTitle from "../../Components/HeaderTitle";
+import React from "react";
+import { TextField} from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import ButtonText from "Components/ButtonText";
 
 const useStyles = makeStyles({
   btn: {
     height: 55,
     width: 90,
+  },
+  root: {
+    display: "flex",
+    gridGap: "30px",
   },
 });
 
@@ -18,14 +22,11 @@ const InputModule = () => {
   const classes = useStyles();
   return (
     <div>
-      <HeaderTitle>Department Module</HeaderTitle>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className={classes.root}>
         <TextField id="outlined-basic" type="number" label="Enter Id" variant="outlined" />
         <TextField id="outlined-basic" type="text" label="Name" variant="outlined" />
-        <TextField id="outlined-basic" type="email" label="Manager Mail" variant="outlined" />
-        <Button variant="contained" size="large" className={classes.btn}>
-          Add
-        </Button>
+        <TextField id="outlined-basic" type="email" label="Manager Email" variant="outlined" />
+        <ButtonText>Add</ButtonText>
       </form>
     </div>
   );

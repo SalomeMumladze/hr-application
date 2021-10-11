@@ -1,5 +1,6 @@
 import React from "react";
-import Department from "../Department/Department";
+import Department from "Department/Department";
+import Employees from "Employees";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
@@ -13,6 +14,7 @@ const Home = () => {
   return (
     <div className={classes.conatiner}>
       <Department />
+      <Employees />
     </div>
   );
 };
